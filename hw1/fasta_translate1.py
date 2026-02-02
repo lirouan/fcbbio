@@ -32,4 +32,4 @@ def main():
     data = parse_fasta()
     print(data)
 
-if __name__ = "__main__": main()
+if __name__ == "__main__": main()
