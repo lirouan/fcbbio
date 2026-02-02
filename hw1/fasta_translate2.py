@@ -17,9 +17,11 @@ def load_codon_table(filename):
 
         for line in f:
             parts = line.strip().split()
-            codon = parts[0] # amino acid name
-            aa = parts[1] # amino acid symbol
-            codon_table[codon] = aa
+            
+            if len(parts) == 2:
+                codon = parts[0] # amino acid name
+                aa = parts[1] # amino acid symbol
+                codon_table[codon] = aa
 
     return codon_table
 
@@ -45,6 +47,7 @@ def translate(sequence, codon_table):
     
 
 def main():
+
     codon_table = load_codon_table("codon_table.txt")
 
     current_id = sys.stdin.readline().strip()[1:]
