@@ -19,7 +19,7 @@ def load_codon_table(filename):
             parts = line.strip().split()
             
             if len(parts) == 2:
-                codon = parts[0] # amino acid name
+                codon = parts[0] # codon
                 aa = parts[1] # amino acid symbol
                 codon_table[codon] = aa
 
