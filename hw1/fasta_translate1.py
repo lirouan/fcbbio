@@ -11,7 +11,7 @@ def parse_fasta():
     sequence = []
 
     for line in sys.stdin:
-        line = line.strip()
+        #line = line.strip()
         if not line:
             continue
         if line.startswith(">"):
